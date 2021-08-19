@@ -1,4 +1,3 @@
-# Neotoma2021 
 ## This respository contains R code associated with "Microbiome stability and structure is governed by host phylogeny over diet and geography in woodrats (*Neotoma* spp.)" 
 
 ### R scripts for manuscript are as follows:
