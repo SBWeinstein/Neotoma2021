@@ -13,6 +13,8 @@ for different primers and different taxonomy assignment methods.
 Taxonomy is assigned using separate custom python script: see https://github.com/robertgreenhalgh/stand. 
 Inputs are fastq.gz files from each sequencing run. Output is a plant ASV table. 
 
+**Simmr_d13C_models.R:** Script for running stable isotope mixing models of δ13C values from woodrat fecal samples to estimate dietary proportions of C3 vs C4/CAM plants.
+
 **cactus_adjust.R:** Adjust sequencing based diet data to account for missing cactus reads using stable isotope data. 
 Script creates a phyloseq object from trnl data, filters ASVs, and creates basic plots demonstrating missing cactus in diets. 
 Individual diets are adjusted using carbon stable isotope data based on SIMMR models from captive cactus diet trials and wild collected fecal samples. Produces the cactus adjusted, filtered, rarefied plant OTU table used in downstream analyses.
