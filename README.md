@@ -1,4 +1,4 @@
-<img align="right" src="https://github.com/SBWeinstein/Neotoma2021/images/logo.svg" width="20%">
+<img align="right" src="https://github.com/SBWeinstein/Neotoma2021/blob/main/microbe_rat_logo-01.svg" width="20%">
 
 ## This respository contains R code associated with "Microbiome stability and structure is governed by host phylogeny over diet and geography in woodrats (*Neotoma* spp.)" 
 
