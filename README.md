@@ -1,12 +1,13 @@
+<img align="right" src="https://github.com/SBWeinstein/Neotoma2021/images/logo.svg" width="20%">
+
 ## This respository contains R code associated with "Microbiome stability and structure is governed by host phylogeny over diet and geography in woodrats (*Neotoma* spp.)" 
 
 ### R scripts for manuscript are as follows:
 
 **16s_processing.R:** Initial processing of bacterial 16s amplicon sequences,
-intitial filtering, and quality control. Inputs are fastq.gz files from each sequencing run.
-outputs are rarefied and non-rarefied microbiome phyloseq objects for downstream analyses.
+intitial filtering, and quality control. Amplicon sequences are available from the [NCBI sequence archive](https://www.ncbi.nlm.nih.gov/sra) under BioProject PRJNA722312. Inputs are fastq.gz files from each sequencing run. Outputs are rarefied and non-rarefied microbiome phyloseq objects for downstream analyses.
 
-**trnl_processing.R:** Initial processing of plant trnL amplicon sequences.
+**trnl_processing.R:** Initial processing of plant trnL amplicon sequences. Amplicon sequences are available from the [NCBI sequence archive](https://www.ncbi.nlm.nih.gov/sra) under BioProject PRJNA722312.
 This script is very similar to the 16s_processing.R file, with modifications
 for different primers and different taxonomy assignment methods.
 Taxonomy is assigned using separate custom python script: see https://github.com/robertgreenhalgh/stand. 
