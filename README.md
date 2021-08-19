@@ -31,37 +31,35 @@ microbiomes (based on Jaccard similarity) than matched species pairs from differ
 sites. Script also includes code to compare average percent of shared ASVs for sympatric and
 equivalent allopatric populations, and code for Figure S5.
 
-mantel_and_clustering.R: Code for two approaches for examining correlations between
-the microbiome and geography, phylogeny, or diet.  Includes comparisons at the individual,
+**mantel_and_clustering.R:** Code for two approaches for examining correlations between
+the microbiome and geography, phylogeny, or diet. Includes comparisons at the individual,
 population, and species levels.  Mantel and Partial Mantel tests are based on distance
 matrices. Hierarchical clustering analyses compare tree congruence, calculating significant
 congruence via a bootstrapped p-value.
 
-Differential_Abundance_captivity.R: Differential abundance analyses using DEseq2.
-Code for differential abundance analyses identifying ASVs (genera, and families)
+**Differential_Abundance_captivity.R:** Code for differential abundance analyses identifying ASVs (genera, and families)
 that increased/decrease in wild v. captive animals. Includes analyses of taxa that change in
 each population and when all individual are grouped together.
 Script is very similar to Differential_Abundance_diet.R but includes loop to run
 through all populations.
 
-Captivity_impacts.R: Exploring how captivity impacts microbiome diversity and
-composition. Includes PERMANOVAs, as creation of a data frame (capdf2)
-of individual changes in observed richness and composition for each animal, and
-statistical analyses using that data frame.
+**Captivity_impacts.R:** Exploring how captivity impacts microbiome diversity and
+composition. Includes PERMANOVAs, builds a dataframe of changes in observed richness and composition for each animal, 
+and includes statistical analyses using that dataframe.
 
-Morans.R: testing for phylogenetic signal in how microbiomes change in captivity.
-Code uses the capdf2 data frame produced in Captivity_impacts.R.
+**Morans.R:** Testing for phylogenetic signal in how animal microbiomes change in captivity.
+Code uses the dataframe produced in Captivity_impacts.R.
 
-rare_lost.R: Using paired wild and captive 16s data to test whether ASVs that
-are less abundant in wild animals are more likely to be lost in captivity
+**rare_lost.R:** Using paired wild and captive 16s data to test whether ASVs that
+are less abundant in wild animals are more likely to be lost in captivity.
 
-Captivity_homogenize.R: code to test whether captivity reduces variation
+**Captivity_homogenize.R:** Code to test whether captivity reduces variation
 among individuals.
 
-PNM_sites_taxa.R: Code for fitting the prokaryote neutral model to ASV data,
+**PNM_sites_taxa.R:** Code for fitting the prokaryote neutral model (PNM) to ASV data,
 testing whether model fit correlates with host species diversity at a site,
 calculating model fit for wild and captive animals, and identifying "neutral"
-and "non-neutral" taxa. The code for the PNM comes from:
+and "non-neutral" taxa. The code for the PNM comes from the supplemental material (Supplemental Code 1) from
 Burns, A., Stephens, W., Stagaman, K. et al. Contribution of neutral processes
 to the assembly of gut microbial communities in the zebrafish over host development.
 ISME J 10, 655–664 (2016). https://doi.org/10.1038/ismej.2015.142.
