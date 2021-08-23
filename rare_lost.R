@@ -1,6 +1,6 @@
 #Test if low abundance taxa from wild are more likely to be lost in captivity
 
-setwd(<>)  # set file location
+setwd()  # set file location
 
 library(phyloseq)
 library(tidyr)
