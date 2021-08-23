@@ -13,7 +13,9 @@ library(eulerr)#for euler diagrams in figures
 library(dplyr) #use to round values in MRM output table
 
 #files
-Neo_tree<-read.tree(file="Neotoma_phylosymtree.nwk") #Tree from Matoqc
+#tree from Matocq MD, Shurtliff QR, & Feldman CR (2007)  
+#Molecular phylogenetics and evolution 42(3):637-652.
+Neo_tree<-read.tree(file="Neotoma_phylosymtree.nwk") 
 site<-as.data.frame(read.csv("Site_lat_long.csv")) #lat/long data
 plant<-readRDS( file = "diet1percent_rar_29May20.rds") #diet data
 ps.rout<-readRDS("ps.rout_phylo_18Oct2020.rds") #microbiome data
@@ -229,7 +231,6 @@ PDS100<-as.vector(Bray$PhyDiSi)*100
 
 ##plot as venn diagram
 #the R circle gives a reference size for 100% of variance
-#could do math and make it overlap now. but math is hard.  center in Illustrator
 combo_wild <- c(Diet = D100, Phylogeny = P100, Site = S100,
 	"Diet&Phylogeny" = PD100, "Diet&Site" = DS100, "Phylogeny&Site" = PS100,
 	"Diet&Phylogeny&Site"=PDS100, "R"=100, "R&Phylogeny"=.0001)
