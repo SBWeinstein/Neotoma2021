@@ -174,12 +174,7 @@ for(j in 1:length(pops)){
 	}
 
 dfpops<-data.frame(output, stringsAsFactors=FALSE)
-#dfpops$p21<-paste(dfpops$pop2, dfpops$pop1)
-#hacky, but we expect 171 combinations of 2 picked from 19
-#length(unique(dfpops$shared))
 
-#need to get rid of the replicates#make it into a matrix and get rid of lower triangle?
-#library(tidyr)
 df2<-dfpops[,c(1,2,7)]
 
 #add on species1, species2, site1, site2
