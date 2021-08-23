@@ -166,7 +166,7 @@ saveRDS(track, "read_tracker_Run2.rds")
 
 ###############################################################################
 #Repeat cutadapt, and sample inference for each sequencing run
-#merge 4 sequence tables into one (Run1, Run2, Run3, RunAB)
+#merge 4 sequence tables into one (Run1, Run2, Run3, RunMAB)
 seqtab16s_merged <- mergeSequenceTables(seqtab16s_RunMAB, seqtab16s_Run1, seqtab16s_Run2, seqtab16s_Run3)
 #remove chimeras from merged sequence table
 seqtab.nochim <- removeBimeraDenovo(seqtab16s_merged, method="consensus", multithread=TRUE)
@@ -190,7 +190,7 @@ mult <- AlignSeqs(DNAStringSet(seqs), anchor=NA)
 #use writeFASTA (shortreads) and not write.FASTA (ape)
 writeFasta(mult, "aligned_seqs.fasta")
 #use FastTree to produce "MLtree2.nwk"
-#code (RUN IN FastTree. NOT IN R): FastTree -gtr -nt < msa2.fasta > MLtree2.nwk
+#code (Run with FastTree in bash/command line not in R): FastTree -gtr -nt < msa2.fasta > MLtree2.nwk
 
 ##############################################################################
 #Make phyloseq object
@@ -217,7 +217,8 @@ ps1<-prune_taxa(taxa_sums(ps1) > 0, ps1)
 ps3<-subset_samples(ps2, Sample_type=="captive" |
                          Sample_type=="wild"|
                          Sample_type=="environ_control")
-ps3<-prune_taxa(taxa_sums(ps3) > 0, ps3)
+#removing ASVs with 0 reads from the sequencing table
+ps3<-prune_taxa(taxa_sums(ps3) > 0, ps3) 
 
 #look at prevalence and abundance of taxa to make a filtering decision
 #Compute prevalence of each feature, store as data.frame
