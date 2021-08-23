@@ -15,7 +15,7 @@ library("TreeTools")
 #files
 ps.rout<-readRDS("ps.rout_phylo_18Oct2020.rds") # microbiome
 site<-as.data.frame(read.csv("Site_lat_long.csv")) #lat/long data
-Neo_tree<-read.tree(file="Neotoma_phylosymtree.nwk") #rat tree
+Neo_tree<-read.tree(file="Neotoma_phylosymtree.nwk") #Neotoma tree with branch lengths from Matocq 2007
 Neo_tree1<-read.tree(file="Neo_bif_tree2.phy") #rat tree for clustering analyses
 sites<-as.data.frame(read.csv("Site_Sp_codes.csv", header=TRUE)) #metadata for populations
 
