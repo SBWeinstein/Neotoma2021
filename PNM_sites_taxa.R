@@ -3,10 +3,10 @@
 #code for Prokaryote Neutral Model from the supplemental material of 
 #Burns, A., Stephens, W., Stagaman, K. et al. Contribution of neutral processes 
 #to the assembly of gut microbial communities in the zebrafish over host development. 
-#ISME J 10, 655–664 (2016). https://doi.org/10.1038/ismej.2015.142
+#ISME J 10, 655â€“664 (2016). https://doi.org/10.1038/ismej.2015.142
 
 
-setwd("C:/Users/Sara//Dropbox/phylosymbiosis/Sequence_analyses_Mar2020/16s_analyses")
+setwd()
 
 library(ggplot2)
 library(phyloseq)
@@ -195,9 +195,9 @@ test3$vals<-factor(test3$vals, levels =c("Above" ,  "Within" ,"Below"))
 ###pull out list of ASVs that are neutral and non-neutral, above and below
 #these can be used to subset taxa for MRM models
 all<-rownames(test3) #2704 taxa
-neutral<-rownames(test3[test3$vals=="Within",]) #1503 taxa
-non_neu<-setdiff(all,neutral) #1201 taxa
+neutral<-rownames(test3[test3$vals=="Within",]) 
+non_neu<-setdiff(all,neutral) 
 
 #pull out "selected for/against" taxa
-Above<-rownames(test3[test3$vals=="Above",]) #1003 taxa
-Below<-rownames(test3[test3$vals=="Below",]) #198 taxa
+Above<-rownames(test3[test3$vals=="Above",]) 
+Below<-rownames(test3[test3$vals=="Below",]) 
