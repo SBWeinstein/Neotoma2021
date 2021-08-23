@@ -3,11 +3,11 @@
 #packages phyloseq and phylosignal have name space conflicts
 #simpler to run from a clean workspace
 
-setwd("C:/Users/Sara//Dropbox/phylosymbiosis/Sequence_analyses_Mar2020/16s_analyses")
+setwd()
 capdf2<-readRDS("capdf2_4Aug21.rds")
-Neo_tree<-read.tree(file="C:/Users/Sara//Dropbox/phylosymbiosis/neotoma/Neotoma_phylosymtree.nwk")
+Neo_tree<-read.tree(file="Neotoma_phylosymtree.nwk")
 
-library(phangorn)#for reading in tree
+library(phangorn) #for reading in tree
 library(phylobase)  #for function phylo4d
 library(phylosignal)  #for Morans I
 
